@@ -46,6 +46,9 @@ public class UserServiceImpl implements UserService {
                 * ((dices[0].equals(MAX_WIN_DICE)) ? MAX_WIN : MIDDLE_WIN))
                 : -stake;
         bet.setWinnings(winnings);
+        User user = userRepository.getById(userId);
+        user.setValet(user.getValet() + winnings);
+        userRepository.save(user);
         return bet;
     }
 
