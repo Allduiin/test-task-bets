@@ -16,6 +16,7 @@ import test.task.bets.service.UserService;
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
+    private static final Double START_VALET = 1000d;
     private static final Short MAX_WIN_DICE = 1;
     private static final Float MAX_WIN = 30f;
     private static final Float MIDDLE_WIN = 7f;
@@ -27,6 +28,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User add(User user) {
+        user.setValet(START_VALET);
         return userRepository.save(user);
     }
 
