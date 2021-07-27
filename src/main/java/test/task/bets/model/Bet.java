@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class Bet {
-    Short dice1;
-    Short dice2;
-    Float stake;
-    Float winnings;
+    private Short dice1;
+    private Short dice2;
+    private Float stake;
+    private Float winnings;
 }
