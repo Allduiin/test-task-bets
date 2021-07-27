@@ -13,5 +13,5 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    Long valet;
+    Double valet;
 }
